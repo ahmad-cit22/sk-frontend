@@ -1,12 +1,12 @@
 <div class="newsletter-popup mfp-hide bg-img" id="newsletter-popup-form"
-    style="background: #f1f1f1 no-repeat center/cover url({{ asset('assets/images/newsletter_popup_bg.jpg') }})">
+    style="background: #f1f1f1 no-repeat center/cover url({{ asset('assets/images/asdasdnewsletter_popup_bg.jpg') }})">
     <div class="newsletter-popup-content">
         <img src="{{ asset('assets/images/logo-light.png') }}" width="111" height="44" alt="Logo"
             class="logo-newsletter">
         <h2>Subscribe to newsletter</h2>
 
         <p>
-            Subscribe to the Porto mailing list to receive updates on new arrivals, special offers and our
+            Subscribe to the SK Corporation mailing list to receive updates on new arrivals, special offers and our
             promotions.
         </p>
 

@@ -25,17 +25,22 @@
                     <div class="row">
                         <div class="col-md-6 m-auto">
                             <form action="#">
-                                <label for="login-email">
-                                    Email address
-                                    <span class="required">*</span>
-                                </label>
-                                <input type="email" class="form-input form-wide" id="login-email" required />
+                                <div class="form-group">
+                                    <label for="login-email">
+                                        Email
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="email" class="form-input form-wide" id="login-email" name="email"
+                                        placeholder="Enter your email" required />
+                                </div>
 
-                                <label for="login-password">
-                                    Password
-                                    <span class="required">*</span>
-                                </label>
-                                <input type="password" class="form-input form-wide" id="login-password" required />
+                                <div class="from-group">
+                                    <label for="login-password">
+                                        Password
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="password" class="form-input form-wide" id="login-password" name="password" placeholder="Enter your password" required />
+                                </div>
 
                                 <div class="form-footer">
                                     <div class="custom-control custom-checkbox mb-0">

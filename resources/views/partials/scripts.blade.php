@@ -9,4 +9,5 @@
 <!-- Main JS File -->
 <script src="{{ asset('assets/js/main.min.js') }}"></script>
 
+<!-- Custom JS -->
 @stack('custom-scripts')

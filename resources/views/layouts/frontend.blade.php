@@ -17,7 +17,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/icons/favicon.png') }}">
 
-    {{-- webfont.js --}}
+    <!-- webfont.js -->
     <script>
         WebFontConfig = {
             google: {
@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/demo4.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}">
 
+    <!-- custom css -->
     @stack('css')
 </head>
 

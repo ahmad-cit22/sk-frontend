@@ -33,8 +33,8 @@
                 <div class="col-lg-10 mx-auto">
                     <div class="row">
                         <div class="col-md-8 m-auto">
-                            <form action="#">
-
+                            <form action="{{ route('register') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -43,7 +43,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <input type="text" class="form-input form-wide" id="register-name"
-                                                name="name" required />
+                                                name="name" placeholder="Enter your name" required />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -53,7 +53,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <input type="text" class="form-input form-wide" id="register-contact-no"
-                                                name="contact" required />
+                                                name="contact" placeholder="Enter your contact no." required />
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                         Email address
                                         <span class="required">*</span>
                                     </label>
-                                    <input type="email" class="form-input form-wide" id="register-email" name="email"
+                                    <input type="email" class="form-input form-wide" id="register-email" name="email" placeholder="Enter your email address"
                                         required />
                                 </div>
 
@@ -73,7 +73,7 @@
                                         <span class="required">*</span>
                                     </label>
                                     <input type="password" class="form-input form-wide" id="register-password"
-                                        name="password" required />
+                                        name="password" placeholder="Enter your password" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="register-confirm-password">
@@ -81,7 +81,7 @@
                                         <span class="required">*</span>
                                     </label>
                                     <input type="password" class="form-input form-wide" id="register-confirm-password"
-                                        name="password_confirmation" required />
+                                        name="password_confirmation" placeholder="Confirm your password" required />
                                 </div>
 
                                 <div class="form-footer mb-2">
