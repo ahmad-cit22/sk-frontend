@@ -1,52 +1,100 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+@extends('layouts.frontend')
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+@push('css')
+    <style>
+        .form-input {
+            border-width: 2px !important;
+            border-color: #505969;
+        }
+    </style>
+@endpush
+
+@section('content')
+    <main class="main">
+        <div class="page-header">
+            <div class="container d-flex flex-column align-items-center">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Register
+                            </li>
+                        </ol>
+                    </div>
+                </nav>
+
+                <h1>Register New Account</h1>
+            </div>
         </div>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-8 m-auto">
+                            <form action="#">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="register-name">
+                                                Name
+                                                <span class="required">*</span>
+                                            </label>
+                                            <input type="text" class="form-input form-wide" id="register-name"
+                                                name="name" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="register-contact-no">
+                                                Contact No.
+                                                <span class="required">*</span>
+                                            </label>
+                                            <input type="text" class="form-input form-wide" id="register-contact-no"
+                                                name="contact" required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-email">
+                                        Email address
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="email" class="form-input form-wide" id="register-email" name="email"
+                                        required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-password">
+                                        Password
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="password" class="form-input form-wide" id="register-password"
+                                        name="password" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-confirm-password">
+                                        Confirm Password
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="password" class="form-input form-wide" id="register-confirm-password"
+                                        name="password_confirmation" required />
+                                </div>
+
+                                <div class="form-footer mb-2">
+                                    <button type="submit" class="btn btn-dark btn-md w-100 mr-0">
+                                        Register
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </main>
+    <!-- End .main -->
+@endsection
