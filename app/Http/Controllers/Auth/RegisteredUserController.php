@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -20,6 +21,10 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+        if (Auth::guard('web')->check()) {
+            return redirect(RouteServiceProvider::HOME);
+        }
+
         return view('auth.register');
     }
 
@@ -30,18 +35,43 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        dd($request->all());
+        // dd($request->all());
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+            'password' => ['required', 'confirmed', 'between:8,16', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'type' => 'client',
+            'password' => !empty($request->password) ? Hash::make($request->password) : Hash::make(12345678),
+            'lang' => 'en',
+            'created_by' => 1,
+            'is_enable_login' => 1,
+            'is_deleted' => 0
+
         ]);
+
+        $customer                   = new Customer;
+        $customer->customer_id      = Customer::customerNumber();
+        $customer->user_id          = $user->id;
+        $customer->name             = $request->name;
+        $customer->contact          = $request->contact;
+        $customer->email            = $request->email;
+        $customer->billing_country  = $request->billing_country;
+        $customer->billing_city     = $request->billing_city;
+        $customer->billing_phone    = $request->contact;
+        $customer->billing_zip      = $request->billing_zip;
+        $customer->billing_address  = $request->billing_address;
+        $customer->shipping_country = $request->billing_country;
+        $customer->shipping_city    = $request->billing_city;
+        $customer->shipping_phone   = $request->contact;
+        $customer->shipping_zip     = $request->billing_zip;
+        $customer->shipping_address = $request->billing_address;
+
+        $customer->save();
 
         event(new Registered($user));
 

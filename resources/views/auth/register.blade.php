@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('title')
+    Register
+@endsection
+
 @push('css')
     <style>
         .form-input {
@@ -44,6 +48,9 @@
                                             </label>
                                             <input type="text" class="form-input form-wide" id="register-name"
                                                 name="name" placeholder="Enter your name" required />
+                                            @error('name')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -54,6 +61,9 @@
                                             </label>
                                             <input type="text" class="form-input form-wide" id="register-contact-no"
                                                 name="contact" placeholder="Enter your contact no." required />
+                                            @error('contact')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -63,8 +73,11 @@
                                         Email address
                                         <span class="required">*</span>
                                     </label>
-                                    <input type="email" class="form-input form-wide" id="register-email" name="email" placeholder="Enter your email address"
-                                        required />
+                                    <input type="email" class="form-input form-wide" id="register-email" name="email"
+                                        placeholder="Enter your email address" required />
+                                    @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group">
@@ -74,6 +87,9 @@
                                     </label>
                                     <input type="password" class="form-input form-wide" id="register-password"
                                         name="password" placeholder="Enter your password" required />
+                                    @error('password')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="register-confirm-password">
@@ -82,6 +98,46 @@
                                     </label>
                                     <input type="password" class="form-input form-wide" id="register-confirm-password"
                                         name="password_confirmation" placeholder="Confirm your password" required />
+                                    @error('password_confirmation')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-address">
+                                        Address
+                                    </label>
+                                    <input type="text" class="form-input form-wide" id="register-address"
+                                        name="billing_address" placeholder="Enter your shipping address" />
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="register-city">
+                                                City
+                                            </label>
+                                            <input type="text" class="form-input form-wide" id="register-city"
+                                                name="billing_city" placeholder="Enter your city" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="register-country">
+                                                Country
+                                            </label>
+                                            <input type="text" class="form-input form-wide" id="register-country"
+                                                name="billing_country" placeholder="Enter your country" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-zipcode">
+                                        Zipcode
+                                    </label>
+                                    <input type="text" class="form-input form-wide" id="register-zipcode"
+                                        name="billing_zip" placeholder="Enter your zipcode" />
                                 </div>
 
                                 <div class="form-footer mb-2">

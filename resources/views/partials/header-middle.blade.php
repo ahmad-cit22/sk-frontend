@@ -20,7 +20,7 @@
                 </h6>
             </div>
 
-            <a href="login.html" class="header-icon" title="login"><i class="icon-user-2"></i></a>
+            <a href="{{ route('login') }}" class="header-icon" title="login"><i class="icon-user-2"></i></a>
 
             <a href="wishlist.html" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a>
 
