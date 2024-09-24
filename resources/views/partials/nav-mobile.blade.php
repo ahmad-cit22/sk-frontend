@@ -8,7 +8,7 @@
             <ul class="mobile-menu">
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li>
-                    <a href="category.html">Categories</a>
+                    <a href="{{ route('categories') }}">Categories</a>
                     <ul>
                         <li><a href="category.html">Full Width Banner</a></li>
                         <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="product.html">Products</a>
+                    <a href="{{ route('products') }}">Products</a>
                     <ul>
                         <li>
                             <a href="#" class="nolink">PRODUCT PAGES</a>

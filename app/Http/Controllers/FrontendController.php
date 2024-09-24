@@ -14,4 +14,14 @@ class FrontendController extends Controller
 
         return view('frontend.index', $data);
     }
+
+    public function categories() {
+
+        return view('frontend.categories');
+    }
+
+    public function products() {
+
+        return view('frontend.products');
+    }
 }
