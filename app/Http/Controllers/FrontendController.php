@@ -15,13 +15,13 @@ class FrontendController extends Controller
         return view('frontend.index', $data);
     }
 
-    public function categories() {
+    public function shop() {
 
-        return view('frontend.categories');
+        return view('frontend.shop');
     }
 
-    public function products() {
+    public function single_product($id) {
 
-        return view('frontend.products');
+        return view('frontend.single-product');
     }
 }

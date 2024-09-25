@@ -3,7 +3,7 @@
         <a href="{{ route('home') }}">Home</a>
     </li>
     <li>
-        <a href="{{ route('categories') }}">Categories</a>
+        <a href="{{ route('shop') }}">Shop</a>
         <div class="megamenu megamenu-fixed-width megamenu-3cols">
             <div class="row">
                 <div class="col-lg-4">
@@ -58,7 +58,7 @@
         <!-- End .megamenu -->
     </li>
     <li>
-        <a href="{{ route('products') }}">Products</a>
+        <a href="{{ route('single-product', 1) }}">Products</a>
         <div class="megamenu megamenu-fixed-width">
             <div class="row">
                 <div class="col-lg-4">
