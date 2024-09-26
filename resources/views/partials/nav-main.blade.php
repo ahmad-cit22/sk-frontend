@@ -120,7 +120,7 @@
             <li><a href="cart.html">Shopping Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="{{ route('about') }}">About Us</a></li>
             <li><a href="#">Blog</a>
                 <ul>
                     <li><a href="blog.html">Blog</a></li>
@@ -132,6 +132,7 @@
             <li><a href="forgot-password.html">Forgot Password</a></li>
         </ul>
     </li>
+    {{-- <li class="{{ request()->routeIs('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About Us</a></li> --}}
     <li><a href="blog.html">Blog</a></li>
     <li>
         <a href="#">Elements</a>

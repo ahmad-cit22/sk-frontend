@@ -101,7 +101,41 @@
                     <div class="testimonial">
                         <div class="testimonial-owner">
                             <figure>
-                                <img src="assets/images/clients/client1.png" alt="client">
+                                <img src="{{ asset('assets/images/clients') }}/client1.png" alt="client">
+                            </figure>
+
+                            <div>
+                                <strong class="testimonial-title">John Smith</strong>
+                                <span>SMARTWAVE CEO</span>
+                            </div>
+                        </div><!-- End .testimonial-owner -->
+
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
+                                dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
+                        </blockquote>
+                    </div><!-- End .testimonial -->
+                    <div class="testimonial">
+                        <div class="testimonial-owner">
+                            <figure>
+                                <img src="{{ asset('assets/images/clients') }}/client1.png" alt="client">
+                            </figure>
+
+                            <div>
+                                <strong class="testimonial-title">John Smith</strong>
+                                <span>SMARTWAVE CEO</span>
+                            </div>
+                        </div><!-- End .testimonial-owner -->
+
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
+                                dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
+                        </blockquote>
+                    </div><!-- End .testimonial -->
+                    <div class="testimonial">
+                        <div class="testimonial-owner">
+                            <figure>
+                                <img src="{{ asset('assets/images/clients') }}/client1.png" alt="client">
                             </figure>
 
                             <div>
@@ -116,41 +150,6 @@
                         </blockquote>
                     </div><!-- End .testimonial -->
 
-                    <div class="testimonial">
-                        <div class="testimonial-owner">
-                            <figure>
-                                <img src="assets/images/clients/client2.png" alt="client">
-                            </figure>
-
-                            <div>
-                                <strong class="testimonial-title">Bob Smith</strong>
-                                <span>SMARTWAVE CEO</span>
-                            </div>
-                        </div><!-- End .testimonial-owner -->
-
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
-                                dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
-                        </blockquote>
-                    </div><!-- End .testimonial -->
-
-                    <div class="testimonial">
-                        <div class="testimonial-owner">
-                            <figure>
-                                <img src="assets/images/clients/client1.png" alt="client">
-                            </figure>
-
-                            <div>
-                                <strong class="testimonial-title">John Smith</strong>
-                                <span>SMARTWAVE CEO</span>
-                            </div>
-                        </div><!-- End .testimonial-owner -->
-
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
-                                dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
-                        </blockquote>
-                    </div><!-- End .testimonial -->
                 </div><!-- End .testimonials-slider -->
             </div><!-- End .container -->
         </div><!-- End .testimonials-section -->

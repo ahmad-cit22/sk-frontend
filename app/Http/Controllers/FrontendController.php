@@ -20,6 +20,11 @@ class FrontendController extends Controller
         return view('frontend.shop');
     }
 
+    public function about() {
+
+        return view('frontend.about');
+    }
+
     public function single_product($id) {
 
         return view('frontend.single-product');
