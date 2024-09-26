@@ -12,10 +12,10 @@
                     <ul>
                         <li><a href="{{ route('about') }}">About Us</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="{{ route('wishlist') }}>My Wishlist</a></li>
+                        <li><a href="{{ route('wishlist') }}">My Wishlist</a></li>
                         <li><a href="cart.html">Cart</a></li>
                         @auth
-                            <li><a href="{{ route('profile') }}">My Account</a></li>
+                            <li><a href="{{ route('dashboard') }}">My Account</a></li>
                         @else
                             <li><a href="{{ route('login') }}">Log In</a></li>
                             <li><a href="{{ route('register') }}" class="">Register</a></li>
