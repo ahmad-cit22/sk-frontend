@@ -1,6 +1,6 @@
 <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
     <figure>
-        <a href="product.html">
+        <a href="{{ route('single-product', 1) }}">
             <img src="{{ asset('assets/images/products') }}/product-1.jpg" width="280" height="280" alt="product" />
             <img src="{{ asset('assets/images/products') }}/product-1-2.jpg" width="280" height="280" alt="product" />
         </a>
@@ -11,10 +11,10 @@
     </figure>
     <div class="product-details">
         <div class="category-list">
-            <a href="category.html" class="product-category">Category</a>
+            <a href="{{ route('shop') }}" class="product-category">Category</a>
         </div>
         <h3 class="product-title">
-            <a href="product.html">Ultimate 3D Bluetooth Speaker</a>
+            <a href="{{ route('single-product', 1) }}">Ultimate 3D Bluetooth Speaker</a>
         </h3>
         <div class="ratings-container">
             <div class="product-ratings">
@@ -31,11 +31,9 @@
         </div>
         <!-- End .price-box -->
         <div class="product-action">
-            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
-            <a href="product.html" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>SELECT
+            <a href="{{ route('wishlist') }}" title="Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
+            <a href="{{ route('single-product', 1) }}" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>SELECT
                     OPTIONS</span></a>
-            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
-                    class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
     <!-- End .product-details -->
