@@ -25,6 +25,26 @@ class FrontendController extends Controller
         return view('frontend.about');
     }
 
+    public function contact() {
+
+        return view('frontend.contact');
+    }
+
+    public function cart() {
+
+        return view('frontend.cart');
+    }
+
+    public function checkout() {
+
+        return view('frontend.checkout');
+    }
+
+    public function wishlist() {
+
+        return view('frontend.wishlist');
+    }
+
     public function single_product($id) {
 
         return view('frontend.single-product');

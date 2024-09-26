@@ -28,6 +28,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
+Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
+Route::get('/wishlist', [FrontendController::class, 'wishlist'])->name('wishlist');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/products/{id}', [FrontendController::class, 'single_product'])->name('single-product');
 

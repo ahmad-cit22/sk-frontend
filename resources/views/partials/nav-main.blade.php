@@ -127,7 +127,7 @@
                     <li><a href="single.html">Blog Post</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="forgot-password.html">Forgot Password</a></li>
         </ul>
@@ -155,7 +155,7 @@
             <li><a href="element-testimonial.html">Testimonials</a></li>
         </ul>
     </li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="{{ route('contact') }}">Contact Us</a></li>
     <li class="float-right"><a href="#" class="pl-5">Special Offer!</a></li>
 </ul>
 

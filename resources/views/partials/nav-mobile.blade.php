@@ -123,7 +123,8 @@
 
             <ul class="mobile-menu">
                 <li><a href="login.html">My Account</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="{{ route('about') }}">About Us</a></li>
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="wishlist.html">My Wishlist</a></li>
                 <li><a href="cart.html">Cart</a></li>
