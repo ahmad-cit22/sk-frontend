@@ -1,6 +1,6 @@
 <div class="product-default left-details product-widget">
     <figure>
-        <a href="product.html">
+        <a href="{{ route('single-product', 1) }}">
             <img src="{{ asset('assets/images/products/small') }}/product-1.jpg" width="84" height="84"
                 alt="product">
             <img src="{{ asset('assets/images/products/small') }}/product-1-2.jpg" width="84" height="84"
@@ -9,7 +9,7 @@
     </figure>
 
     <div class="product-details">
-        <h3 class="product-title"> <a href="product.html">Ultimate 3D Bluetooth
+        <h3 class="product-title"> <a href="{{ route('single-product', 1) }}">Ultimate 3D Bluetooth
                 Speaker</a>
         </h3>
 

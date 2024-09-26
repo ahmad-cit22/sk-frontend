@@ -7,7 +7,7 @@
 				'loop': false
 			}">
             <div class="home-slide home-slide1 banner">
-                <img class="slide-bg" src="{{ asset('assets/images/demoes/demo4/slider') }}/slide-1.jpg" width="1903"
+                <img class="slide-bg" src="{{ asset('assets/images/demoes/demo4/slider') }}/slideasd-1.jpg" width="1903"
                     height="499" alt="slider image">
                 <div class="container d-flex align-items-center">
                     <div class="banner-layer appear-animate" data-animation-name="fadeInUpShorter">
@@ -19,7 +19,7 @@
                             <b class="coupon-sale-text text-white bg-secondary align-middle"><sup>$</sup><em
                                     class="align-text-top">199</em><sup>99</sup></b>
                         </h5>
-                        <a href="category.html" class="btn btn-dark btn-lg">Shop Now!</a>
+                        <a href="{{ route('shop') }}" class="btn btn-dark btn-lg">Shop Now!</a>
                     </div>
                     <!-- End .banner-layer -->
                 </div>
@@ -37,7 +37,7 @@
                             <h3 class="m-b-2">20% off</h3>
                             <h3 class="mb-2 heading-border">Accessories</h3>
                             <h2 class="text-transform-none m-b-4">Summer Sale</h2>
-                            <a href="category.html" class="btn btn-block btn-dark">Shop All Sale</a>
+                            <a href="{{ route('shop') }}" class="btn btn-block btn-dark">Shop All Sale</a>
                         </div>
                     </div>
                     <!-- End .banner-layer -->
@@ -109,7 +109,7 @@
                         <div class="banner-layer">
                             <h3 class="m-b-2">Porto Watches</h3>
                             <h4 class="m-b-3 text-primary"><sup class="text-dark"><del>20%</del></sup>30%<sup>OFF</sup></h4>
-                            <a href="category.html" class="btn btn-sm btn-dark">Shop Now</a>
+                            <a href="{{ route('shop') }}" class="btn btn-sm btn-dark">Shop Now</a>
                         </div>
                     </div>
                     <!-- End .banner -->
@@ -127,7 +127,7 @@
                                     <h4 class="pb-4 pb-lg-0 mb-0 text-body">Starting at $99</h4>
                                 </div>
                                 <div class="col-lg-5 text-lg-left px-0 px-xl-3">
-                                    <a href="category.html" class="btn btn-sm btn-dark">Shop Now</a>
+                                    <a href="{{ route('shop') }}" class="btn btn-sm btn-dark">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                         <div class="banner-layer text-right">
                             <h3 class="m-b-2">Handbags</h3>
                             <h4 class="m-b-2 text-secondary text-uppercase">Starting at $99</h4>
-                            <a href="category.html" class="btn btn-sm btn-dark">Shop Now</a>
+                            <a href="{{ route('shop') }}" class="btn btn-sm btn-dark">Shop Now</a>
                         </div>
                     </div>
                     <!-- End .banner -->
@@ -208,7 +208,7 @@
                             </h2>
                         </div>
                         <div class="col-md-3 col-sm-4 text-center text-sm-right">
-                            <a class="btn btn-light btn-white btn-lg" href="category.html">View Sale</a>
+                            <a class="btn btn-light btn-white btn-lg" href="{{ route('shop') }}">View Sale</a>
                         </div>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                     </div>
                     <div class="col-md-4 col-xl-3 pb-4 pb-md-0 appear-animate" data-animation-name="fadeIn"
                         data-animation-delay="300">
-                        <a href="category.html" class="btn btn-dark btn-black ls-10">View Sale</a>
+                        <a href="{{ route('shop') }}" class="btn btn-dark btn-black ls-10">View Sale</a>
                     </div>
                     <div class="col-md-4 mr-xl-auto text-md-left appear-animate" data-animation-name="fadeInLeftShorter"
                         data-animation-delay="600">

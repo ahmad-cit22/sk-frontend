@@ -9,12 +9,12 @@
                 <div class="col-lg-4">
                     <a href="#" class="nolink">VARIATION 1</a>
                     <ul class="submenu">
-                        <li><a href="category.html">Fullwidth Banner</a></li>
+                        <li><a href="{{ route('shop') }}">Fullwidth Banner</a></li>
                         <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
                         </li>
                         <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
                         </li>
-                        <li><a href="category.html">Left Sidebar</a></li>
+                        <li><a href="{{ route('shop') }}">Left Sidebar</a></li>
                         <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                         <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
                         <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
@@ -29,7 +29,7 @@
                         <li><a href="category-list.html">List Types</a></li>
                         <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
                         </li>
-                        <li><a href="category.html">3 Columns Products</a></li>
+                        <li><a href="{{ route('shop') }}">3 Columns Products</a></li>
                         <li><a href="category-4col.html">4 Columns Products</a></li>
                         <li><a href="category-5col.html">5 Columns Products</a></li>
                         <li><a href="category-6col.html">6 Columns Products</a></li>
@@ -49,7 +49,7 @@
                                 <b class="">50%</b>
                                 <i>OFF</i>
                             </h4>
-                            <a href="category.html" class="btn btn-sm btn-dark">SHOP NOW</a>
+                            <a href="{{ route('shop') }}" class="btn btn-sm btn-dark">SHOP NOW</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                                 <b class="">50%</b>
                             </h4>
                         </div>
-                        <a href="category.html" class="btn btn-sm btn-dark">SHOP NOW</a>
+                        <a href="{{ route('shop') }}" class="btn btn-sm btn-dark">SHOP NOW</a>
                     </div>
                 </div>
                 <!-- End .col-lg-4 -->

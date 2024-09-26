@@ -1,7 +1,7 @@
 <article class="post">
     <div class="post-media">
         <a href="single.html">
-            <img src="{{ asset('assets/images/blog/home') }}/post-1.jpg" alt="Post" width="225" height="280">
+            <img src="{{ asset('assets/images/blog/home') }}/post-asd1.jpg" alt="Post" width="225" height="280">
         </a>
         <div class="post-date">
             <span class="day">26</span>

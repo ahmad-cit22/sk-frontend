@@ -10,7 +10,7 @@
                 <li>
                     <a href="{{ route('shop') }}">Shop</a>
                     <ul>
-                        <li><a href="category.html">Full Width Banner</a></li>
+                        <li><a href="{{ route('shop') }}">Full Width Banner</a></li>
                         <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
                         <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                         <li><a href="https://www.portotheme.com/html/porto_ecommerce/category-sidebar-left.html">Left
@@ -22,7 +22,7 @@
                         <li><a href="#">List Types</a></li>
                         <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll<span
                                     class="tip tip-new">New</span></a></li>
-                        <li><a href="category.html">3 Columns Products</a></li>
+                        <li><a href="{{ route('shop') }}">3 Columns Products</a></li>
                         <li><a href="category-4col.html">4 Columns Products</a></li>
                         <li><a href="category-5col.html">5 Columns Products</a></li>
                         <li><a href="category-6col.html">6 Columns Products</a></li>
@@ -159,7 +159,7 @@
         </a>
     </div>
     <div class="sticky-info">
-        <a href="category.html" class="">
+        <a href="{{ route('shop') }}" class="">
             <i class="icon-bars"></i>Categories
         </a>
     </div>
