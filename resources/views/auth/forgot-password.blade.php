@@ -1,25 +1,64 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+@extends('layouts.frontend')
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('content')
+    <main class="main">
+        <div class="page-header">
+            <div class="container d-flex flex-column align-items-center">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                My Account
+                            </li>
+                        </ol>
+                    </div>
+                </nav>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                <h1>My Account</h1>
+            </div>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
+        <div class="container reset-password-container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="feature-box border-top-primary">
+                        <div class="feature-box-content">
+                            <form class="mb-0" method="POST" action="{{ route('password.email') }}">
+                                @csrf
+                                <p>
+                                    Lost your password? Please enter your
+                                    username or email address. You will receive
+                                    a link to create a new password via email.
+                                </p>
+                                <div class="form-group mb-0">
+                                    <label for="email" class="font-weight-normal">Username or email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required />
+
+                                    @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-footer mb-0">
+                                    <a href="{{ route('login') }}">Click here to login</a>
+
+                                    <button type="submit"
+                                        class="btn btn-md btn-primary form-footer-right font-weight-normal text-transform-none mr-0">
+                                        Reset Password
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
-</x-guest-layout>
+    </main><!-- End .main -->
+@endsection

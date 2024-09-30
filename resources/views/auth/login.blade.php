@@ -28,6 +28,12 @@
                 <div class="col-lg-10 mx-auto">
                     <div class="row">
                         <div class="col-md-6 m-auto">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
@@ -62,7 +68,7 @@
                                             me</label>
                                     </div>
 
-                                    <a href="forgot-password.html"
+                                    <a href="{{ route('password.request') }}"
                                         class="forget-password text-dark form-footer-right">Forgot
                                         Password?
                                     </a>

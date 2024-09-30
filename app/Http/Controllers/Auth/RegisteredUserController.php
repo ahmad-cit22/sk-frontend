@@ -60,11 +60,14 @@ class RegisteredUserController extends Controller
         $customer->name             = $request->name;
         $customer->contact          = $request->contact;
         $customer->email            = $request->email;
+        $customer->billing_name     = $request->name;
         $customer->billing_country  = $request->billing_country;
         $customer->billing_city     = $request->billing_city;
         $customer->billing_phone    = $request->contact;
         $customer->billing_zip      = $request->billing_zip;
         $customer->billing_address  = $request->billing_address;
+
+        $customer->shipping_name    = $request->name;
         $customer->shipping_country = $request->billing_country;
         $customer->shipping_city    = $request->billing_city;
         $customer->shipping_phone   = $request->contact;
