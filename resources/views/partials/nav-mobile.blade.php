@@ -125,9 +125,9 @@
                 <li><a href="login.html">My Account</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="wishlist.html">My Wishlist</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="{{ route('blogs') }}">Blog</a></li>
+                <li><a href="{{ route('wishlist') }}">My Wishlist</a></li>
+                <li><a href="{{ route('cart') }}">Cart</a></li>
                 <li><a href="{{ route('login') }}" class="login-link">Log In</a></li>
                 <li><a href="{{ route('register') }}" class="login-link">Register</a></li>
             </ul>

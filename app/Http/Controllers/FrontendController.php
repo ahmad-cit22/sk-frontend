@@ -57,6 +57,18 @@ class FrontendController extends Controller
         return view('frontend.single-product');
     }
 
+    public function blogs()
+    {
+
+        return view('frontend.blogs');
+    }
+
+    public function single_blog($id)
+    {
+
+        return view('frontend.single-blog');
+    }
+
     public function test()
     {
         // Start time

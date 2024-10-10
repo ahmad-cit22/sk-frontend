@@ -116,14 +116,14 @@
     <li class="{{ request()->routeIs('wishlist') || request()->routeIs('cart') || request()->routeIs('checkout') || request()->routeIs('dashboard') || request()->routeIs('about') || request()->routeIs('contact') || request()->routeIs('login') || request()->routeIs('register') || request()->routeIs('forgot-password') || request()->routeIs('blog') ? 'active' : '' }}">
         <a href="#">Pages</a>
         <ul>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="cart.html">Shopping Cart</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
+            <li><a href="{{ route('cart') }}">Shopping Cart</a></li>
+            <li><a href="{{ route('checkout') }}">Checkout</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="{{ route('about') }}">About Us</a></li>
             <li><a href="#">Blog</a>
                 <ul>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="{{ route('blogs') }}">Blog</a></li>
                     <li><a href="single.html">Blog Post</a></li>
                 </ul>
             </li>
@@ -133,7 +133,7 @@
         </ul>
     </li>
     {{-- <li class="{{ request()->routeIs('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About Us</a></li> --}}
-    <li><a href="blog.html">Blog</a></li>
+    <li><a href="{{ route('blogs') }}">Blog</a></li>
     <li>
         <a href="#">Elements</a>
         <ul class="custom-scrollbar">

@@ -35,5 +35,7 @@ Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout
 Route::get('/wishlist', [FrontendController::class, 'wishlist'])->name('wishlist');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/products/{id}', [FrontendController::class, 'single_product'])->name('single-product');
+Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
+Route::get('/blogs/{id}', [FrontendController::class, 'single_blog'])->name('single-blog');
 
 require __DIR__.'/auth.php';

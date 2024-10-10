@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
             'type' => 'client',
             'password' => !empty($request->password) ? Hash::make($request->password) : Hash::make(12345678),
             'lang' => 'en',
-            'created_by' => 1,
+            'created_by' => Auth::user()->id,
             'is_enable_login' => 1,
             'is_deleted' => 0
 
